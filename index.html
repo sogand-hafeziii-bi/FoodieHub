@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>رستوران شهرزاد</title>
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- لینک فونت آیکون (FontAwesome) -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+        <link rel="stylesheet" type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="fa">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport"
+                    content="width=device-width, initial-scale=1.0">
+                <title>سبد خرید با جاوااسکریپت</title>
+                <link rel="stylesheet" href="styles.css">
+                <script src="https://kit.fontawesome.com/a076d05399.js"
+                    crossorigin="anonymous"></script>
+            </head>
+            <body>
+
+                <header>
+                    <nav class="navbar">
+                        <div class="logo">
+                            <h1>شهرزاد</h1>
+                        </div>
+                        <ul class="nav-links">
+                            <li><a href="#">خانه</a></li>
+                            <li><a href="#">منو</a></li> 
+                            <li><a href="#">غذا های ویژه</a></li>
+                            <li><a href="#">نظرات مشتریان</a></li>
+                            <li><a href="#">آدرس ما</a></li>
+                           
+                        </ul>
+                        <div class="icons">
+                            <!-- آیکون سبد خرید -->
+                            <div class="cart-icon" onclick="toggleCart()">
+                                🛒 <span id="cart-count">۰</span>
+                            </div>
+
+                            <!-- سبد خرید -->
+                            <div class="cart-dropdown">
+                                <div class="cart-header">
+                                    <h3>سبد خرید</h3>
+                                    <button class="close-cart"
+                                        onclick="toggleCart()">✖</button>
+                                </div>
+                                <ul id="cart-items" class="cart-items"></ul>
+                                <div class="cart-footer">
+                                    <p>جمع کل: <span id="cart-total">۰</span>
+                                        تومان</p>
+                                    <button class="checkout-btn">پرداخت</button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+
+                <!-- هرو -->
+                <section class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+
+                            <div class="hero-image">
+                                <img data-aos="zoom-in" src="./assests/images/home.png"
+                                    alt="برگر شهرزاد">
+                            </div>
+                            <div data-aos="fade-right" class="hero-text">
+                                <h2>برگر شهرزاد</h2>
+                                <p> بهترین برگر های شاهین شهر فقط در رستوران ما</p>
+                                <p>آدرس ما: اصفهان شاهین شهر خیابان فردوسی فرعی 12 شرقی</p>
+                                <button>ثبت سفارش</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- menu -->
+                <section data-aos="zoom-in-left" class="menu container">
+
+                    <h2>منوی شهرزاد</h2>
+                    <div class="grid-menu">
+                        <div>
+                            <img src="./assests/images/feature-menu-6.png" />
+                            <p>پیتزا</p>
+                        </div>
+                        <div>
+                            <img src="./assests/images/feature-menu-5.png" />
+                            <p>ماهی</p>
+                        </div>
+                        <div>
+                            <img src="./assests/images/feature-menu-4.png" />
+                            <p>نوشیدنی</p>
+                        </div>
+                        <div>
+                            <img src="./assests/images/feature-menu-3.png" />
+                            <p>مرغ</p>
+                        </div>
+                        <div>
+                            <img src="./assests/images/feature-menu-2.png" />
+                            <p>برگر</p>
+                        </div>
+                        <div>
+                            <img src="./assests/images/feature-menu-1.png" />
+                            <p>باربیکیو</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- featured -->
+
+                <section class="featured">
+                    <h2  data-aos="zoom-in-right" > غذا های ویژه </h2>
+                    <!--search-->
+                    <div  data-aos="zoom-in-right"  >
+                        <input type="text" id="search-box"
+                            placeholder="جستجوی محصول..."
+                            class="search-input">
+
+                    </div>
+                    <div   data-aos="fade-up" class="container">
+                        <div class="featured-grid">
+                            <div class="card" data-name="چیلی برگر"
+                                data-price="298000">
+                                <img src="./assests/images/item-1.png" />
+                                <p class="title">چیلی برگر</p>
+                                <p class="price">298,000تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="استیک"
+                                data-price="885000">
+                                <img src="./assests/images/item-2.png" />
+                                <p class="title">استیک</p>
+                                <p class="price">885,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="برگر گوشت"
+                                data-price="310000">
+                                <img src="./assests/images/item-3.png" />
+                                <p class="title">برگر گوشت</p>
+                                <p class="price">310,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="مرغ سوخاری"
+                                data-price="345000">
+                                <img src="./assests/images/image5.png" />
+                                <p class="title">مرغ سوخاری</p>
+                                <p class="price">345,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="پیتزا مخصوص"
+                                data-price="410000">
+                                <img src="./assests/images/image4.png" />
+                                <p class="title">پیتزا مخصوص</p>
+                                <p class="price">410,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="پیتزا مخلوط"
+                                data-price="410000">
+                                <img src="./assests/images/item-6.png" />
+                                <p class="title">پیتزا مخلوط</p>
+                                <p class="price">410,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="چیز برگر"
+                                data-price="328000">
+                                <img src="./assests/images/image1.png" />
+                                <p class="title">چیز برگر</p>
+                                <p class="price">328,000 تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                            <div class="card" data-name="فیله استریپس"
+                                data-price="325000">
+                                <img src="./assests/images/item-8.png" />
+                                <p class="title">فیله استریپس</p>
+                                <p class="price"> 325,000تومان</p>
+                                <button class="add-to-cart">ثبت سفارش</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="menu-board">
+                    <h2 data-aos="zoom-in-right"   class="title">تابلو غذاهای شهرزاد</h2>
+                    <div class="menu-grid">
+                        <div class="menu-category">
+                            <h3 class="category-title">برگر ها</h3>
+                            <div data-aos="zoom-in-right" class="menu-item">
+                                <img    src="./assests/images/image1.png"
+                                    alt="Food 1" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> چیز برگر</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 328,000 تا 495,000 تومان</p>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-right" class="menu-item">
+                                <img    src="./assests/images/burger-2.png"
+                                    alt="Food 2" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> میکس برگر</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 278,000 تا 348,000 تومان</p>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-right"  class="menu-item">
+                                <img   src="./assests/images/burger-3.png"
+                                    alt="Food 3" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> چیلی برگر</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 298,000 تا 412,000 تومان</p>
+                                </div>
+                            </div>
+                            <div  data-aos="zoom-in-right" class="menu-item">
+                                <img   src="./assests/images/burger-4.png"
+                                    alt="Food 4" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> برگر گوشت</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 310,000 تا 428,000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-category">
+                            <h3 class="category-title">رستوران</h3>
+                            <div data-aos="zoom-in-left" class="menu-item">
+                                <img   src="./assests/images/bbq-1.png"
+                                    alt="Food 5" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> استیک فیله گوساله</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 885,000 تا 1,522,000 تومان</p>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-left" class="menu-item">
+                                <img  src="./assests/images/bbq-2.png"
+                                    alt="Food 6" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> سوخاری</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 298,000 تا 398,000 تومان</p>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-left" class="menu-item">
+                                <img  src="./assests/images/bbq-3.png"
+                                    alt="Food 7" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name">  استیک میکس</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 678,000 تا1,252,000 تومان</p>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-left" class="menu-item">
+                                <img  src="./assests/images/bbq-4.png"
+                                    alt="Food 8" class="food-image" />
+                                <div class="food-details">
+                                    <p class="food-name"> استیک گوشت با سس باربیکیو</p>
+                                    <p class="food-description"> سایز بزرگ و
+                                        متوسط از 787,000 تا 1,345,000 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <div class="comments-section">
+                    <h2>نظرات مشتریان</h2>
+                    <div class="comments-slider">
+                        <div class="comment">
+                            <p>"   غذاهای این رستوران واقعا خوشمزه و باکیفیت هستند. محیط بسیار دلنشین و پرسنل خوش برخورد."</p>
+                            <span>- آتنا حضوری</span>
+                        </div>
+                        <div class="comment">
+                            <p>"من همیشه برای مهمانی‌های خانوادگی از این رستوران غذا سفارش می‌دم. همه از طعم غذاها راضی هستند."</p>
+                            <span>- علی امینی</span>
+                        </div>
+                        <div class="comment">
+                            <p>" بهترین رستوران در شهر! غذاها تازه و با کیفیت بالا سرو می‌شوند. حتما توصیه میکنم از این تجربه دلپذیر استفاده کنید."</p>
+                            <span>- لاله قربانی پور </span>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="footer-container">
+                        <h2 class="footer-title">رستوران شهرزاد</h2>
+                        <p class="footer-text">تجربه‌ای بی‌نظیر از طعم و
+                            کیفیت</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-link"><i
+                                    class="fab fa-instagram instagram-icon"></i></a>
+                            <a href="#" class="social-link"><i
+                                    class="fab fa-telegram-plane telegram-icon"></i></a>
+                            <a href="#" class="social-link"><i
+                                    class="fab fa-facebook-f facebook-icon"></i></a>
+                            <a href="#" class="social-link"><i
+                                    class="fab fa-x x-icon"></i></a>
+                            <!-- آیکون X -->
+                        </div>
+                        <p class="footer-text">آدرس ما: اصفهان شاهین شهر خیابان فردوسی فرعی 12 شرقی
+
+                        </p>
+                        
+
+                        <p class="copyright">© 2025 تمامی حقوق محفوظ است |
+                            رستوران شهرزاد</p>
+                    </div>
+                </footer>
+
+                <script
+                    src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+                <script
+                    src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/simpleCart/3.0.5/simpleCart.min.js"></script>
+                <script src="app.js"></script>
+
+            </body>
+        </html>
